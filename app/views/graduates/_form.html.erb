@@ -1,0 +1,62 @@
+<%= form_for(graduate) do |f| %>
+  <% if graduate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(graduate.errors.count, "error") %> prohibited this graduate from being saved:</h2>
+
+      <ul>
+      <% graduate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cedula %>
+    <%= f.text_field :cedula %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :apellido %>
+    <%= f.text_field :apellido %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sexo %>
+    <%= f.text_field :sexo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :carrera %>
+    <%= f.text_field :carrera %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direccion %>
+    <%= f.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha_nacimiento %>
+    <%= f.date_select :fecha_nacimiento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha_egreso %>
+    <%= f.date_select :fecha_egreso %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

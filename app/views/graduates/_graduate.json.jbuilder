@@ -1,0 +1,2 @@
+json.extract! graduate, :id, :cedula, :nombre, :apellido, :sexo, :carrera, :telefono, :direccion, :fecha_nacimiento, :fecha_egreso, :created_at, :updated_at
+json.url graduate_url(graduate, format: :json)

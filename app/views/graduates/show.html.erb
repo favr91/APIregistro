@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @graduate.cedula %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @graduate.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @graduate.apellido %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @graduate.sexo %>
+</p>
+
+<p>
+  <strong>Carrera:</strong>
+  <%= @graduate.carrera %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @graduate.telefono %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @graduate.direccion %>
+</p>
+
+<p>
+  <strong>Fecha nacimiento:</strong>
+  <%= @graduate.fecha_nacimiento %>
+</p>
+
+<p>
+  <strong>Fecha egreso:</strong>
+  <%= @graduate.fecha_egreso %>
+</p>
+
+<%= link_to 'Edit', edit_graduate_path(@graduate) %> |
+<%= link_to 'Back', graduates_path %>

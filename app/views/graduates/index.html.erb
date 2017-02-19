@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Graduates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cedula</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Sexo</th>
+      <th>Carrera</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Fecha nacimiento</th>
+      <th>Fecha egreso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @graduates.each do |graduate| %>
+      <tr>
+        <td><%= graduate.cedula %></td>
+        <td><%= graduate.nombre %></td>
+        <td><%= graduate.apellido %></td>
+        <td><%= graduate.sexo %></td>
+        <td><%= graduate.carrera %></td>
+        <td><%= graduate.telefono %></td>
+        <td><%= graduate.direccion %></td>
+        <td><%= graduate.fecha_nacimiento %></td>
+        <td><%= graduate.fecha_egreso %></td>
+        <td><%= link_to 'Show', graduate %></td>
+        <td><%= link_to 'Edit', edit_graduate_path(graduate) %></td>
+        <td><%= link_to 'Destroy', graduate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Graduate', new_graduate_path %>
